@@ -1,9 +1,11 @@
 <!--recibe place holder como property-->
 <!--eventos del searchbox (keyup.enter)="emitValue(txtInput.value)-->
 <!--referencia local al valor del input txtInput.value-->
+<!--(keyup.enter)="emitValue(txtInput.value)"-->
 <input type="text"
+[value]="initialValue"
  [placeholder]="placeholder"
  class="form-control"
- (keyup.enter)="emitValue(txtInput.value)"
+ (keyup)="onKeypress(txtInput.value)"
  #txtInput
  >
